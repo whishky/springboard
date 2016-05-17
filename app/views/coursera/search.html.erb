@@ -1,0 +1,28 @@
+
+<%#= will_paginate %>
+<br>
+<br>
+<ul class="courses">
+<% if @courses.any? %>
+      <h1>Courses (<%= @courses["elements"].size() %>)</h1>
+  <table>
+  <tr>
+      <th> Courses  </th>
+      <th>  Partners  </th>
+      <th> Instructor </th>
+  </tr>
+  <% for i in 0..@courses["elements"].size() - 1 %>
+  <tr>
+      <th><%=  @courses["elements"][i]["name"] %>  </th>
+      <th><%=  @partner["elements"][0]["name"] %>  </th>
+      <% if @instructor["elements"][0]["name"] %>
+      <th><%= @instructor["elements"][0]["name"] %></th>
+      <% else %>
+      <th> No Instructor found  </th>
+      <% end %>
+    
+    </tr>
+	<% end %>
+  </table>
+	<% end %>
+</ul>

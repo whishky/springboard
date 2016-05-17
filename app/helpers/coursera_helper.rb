@@ -1,0 +1,2 @@
+module CourseraHelper
+end

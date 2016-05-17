@@ -1,0 +1,8 @@
+<div class="navbar navbar-default navbar-static-top">
+  <div class="container">
+	<%= form_tag(coursera_search_path, :method => "get", id: "search-form") do %>
+          <%= text_field_tag :search, params[:search],:value => "",  placeholder: "Search courses" %>
+          <%= submit_tag "Search", :name => nil %>
+	<% end %>
+	</div>
+	</div>
